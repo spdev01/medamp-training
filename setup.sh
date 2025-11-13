@@ -8,7 +8,7 @@ cd GroundingDINO
 # Download Grounding DINO weights
 mkdir -p weights
 cd weights
-wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swinb_cogcoor.pth
+wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth
 cd ../..
 
 echo "Grounding DINO setup completed!"
