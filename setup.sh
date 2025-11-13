@@ -5,8 +5,6 @@ git clone https://github.com/IDEA-Research/GroundingDINO.git
 cd GroundingDINO
 
 # Install requirements
-pip install -q -e .
-
 # Download Grounding DINO weights
 mkdir -p weights
 cd weights
