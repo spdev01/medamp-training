@@ -9,7 +9,7 @@ paths:
 
 # Frame extraction settings
 extraction:
-  frame_interval: 30                           # Extract every Nth frame (30 = ~1fps for 30fps video)
+  frame_interval: 1                           # Extract every Nth frame (30 = ~1fps for 30fps video)
   max_frames_per_video: null                   # Maximum frames per video (null = all frames)
   target_size: null                            # Resize frames to [width, height] (null = keep original)
 
