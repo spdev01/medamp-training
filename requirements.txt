@@ -1,0 +1,20 @@
+# Core dependencies
+opencv-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+PyYAML>=6.0
+
+# # Deep Learning
+# torch>=2.0.0
+# torchvision>=0.15.0
+
+# Grounding DINO
+# Note: Install from source or use groundingdino-py
+# See README.md for installation instructions
+# groundingdino-py
+
+# YOLO (optional, for training)
+ultralytics>=8.0.0
+
+# Utilities
+tqdm>=4.65.0

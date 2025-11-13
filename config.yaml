@@ -1,0 +1,36 @@
+# Video Frame Extraction and Auto-Annotation Configuration
+
+# Paths configuration
+paths:
+  video_input: raw_footages                    # Directory containing input videos
+  frames_output: extracted_frames              # Output directory for extracted frames
+  annotations_output: yolo_annotations         # Output directory for YOLO annotations
+  visualizations_output: visualizations        # Output directory for visualization images
+
+# Frame extraction settings
+extraction:
+  frame_interval: 30                           # Extract every Nth frame (30 = ~1fps for 30fps video)
+  max_frames_per_video: null                   # Maximum frames per video (null = all frames)
+  target_size: null                            # Resize frames to [width, height] (null = keep original)
+
+# Grounding DINO detection settings
+grounding_dino:
+  config_path: "GroundingDINO/groundingdino/config/GroundingDINO_SwinB_cfg.py"  # Path to model config
+  checkpoint_path: "weights/groundingdino_swinb_cogcoor.pth"  # Path to model checkpoint
+  text_prompt: "ampoule . medicine ampoule . glass vial . medical vial"  # Detection prompt for medicine ampoules
+  box_threshold: 0.30                          # Bounding box confidence threshold (0-1)
+  text_threshold: 0.20                         # Text matching threshold (0-1)
+  min_confidence: 0.25                         # Minimum confidence to save annotation (0-1)
+
+# Visualization settings
+visualization:
+  enabled: true                                # Enable/disable visualization generation
+  show_confidence: true                        # Show confidence scores on visualizations
+  max_images: 50                               # Maximum number of images to visualize
+  create_grid: true                            # Create grid visualization of sample images
+
+# Common detection prompts for different use cases:
+# Medical: "lesion . tumor . abnormality . nodule . mass . cyst"
+# Traffic: "person . car . bicycle . motorcycle . bus . truck . traffic light . stop sign"
+# General: "person . animal . vehicle . object"
+# Custom: Replace with your specific objects separated by " . "
