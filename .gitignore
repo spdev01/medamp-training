@@ -120,7 +120,4 @@ wandb/
 
 venv
 GroundingDINO
-visualizations
-yolo_annotations
 weights
-extracted_frames
